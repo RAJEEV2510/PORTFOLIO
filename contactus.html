@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        #home {
+            text-decoration: none;
+            background: black;
+            color: orangered;
+            position: absolute;
+            top: 200px;
+            left: 20px;
+            width: 100px;
+            height: 50px;
+            font-size: 30px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            vertical-align: middle;
+
+
+            text-align: center;
+        }
+
+        .share {
+            position: absolute;
+            top: 500px;
+            right: 60px;
+            background-color: #ff9100;
+            width: 60px;
+            color: white;
+            height: 60px;
+            z-index: 999;
+            overflow: hidden;
+            text-align: center;
+            line-height: 65px;
+            font-size: 1.5em;
+            box-shadow: 0px 3px 9px rgba(0, 0, 0, .5);
+        }
+
+        .one,
+        .two,
+        .three {
+            position: absolute;
+            top: 500px;
+            right: 60px;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 49px;
+            font-size: 1.5em;
+            z-index: -1;
+        }
+
+        .share:hover {
+            cursor: pointer;
+        }
+
+        .one:hover,
+        .two:hover,
+        .three:hover .one {
+            background-color: #2196f3;
+        }
+
+        .two {
+            background-color: #00e5ff;
+        }
+
+        .three {
+            background-color: #6a1b9a;
+        }
+
+
+        .footer {
+            margin-top: 200px;
+            width: 100%;
+            height: 250px;
+            padding-top: 100px;
+
+            display: flex;
+            flex-direction: row;
+            background: #070617;
+
+            justify-content: space-around;
+
+        }
+
+        .col li {
+            list-style-type: none;
+        }
+
+        .col li a {
+            color: white;
+            list-style: none;
+            text-decoration: none;
+
+        }
+
+        .project li a {
+            color: white;
+
+            text-decoration: none;
+
+        }
+
+        .project li {
+            list-style: none;
+            ;
+        }
+
+        .project h1,
+        .col h1 {
+            color: white;
+            font-weight: 900;
+        }
+
+
+        .social {
+            width: 100%;
+            background: black;
+            height: 80px;
+            justify-content: center;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .code img {
+            border-radius: 50%;
+            height: 160px;
+            width: 150px;
+            position: sticky;
+        }
+
+
+        #btn2 {
+            text-align: center;
+            color: yellow;
+            font-size: 30px;
+            background-color: black;
+            border: 4px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            position: absolute;
+            left: 550px;
+            top: 350px;
+            width: 150px;
+            text-transform: capitalize;
+        }
+
+        #contact {
+
+            position: absolute;
+            top: 200px;
+            left: 150px;
+            color: black;
+
+        }
+
+        #img {
+            position: absolute;
+
+            height: 200px;
+            width: 100%;
+        }
+
+        #text {
+            font-size: 20px;
+            font-weight: 100;
+            background-color: black;
+            width: 400px;
+            border-radius: 10%;
+            color: yellow;
+            text-align: center;
+            display: none;
+            padding: 20px;
+            position: absolute;
+            right: 10px;
+
+            box-shadow: 5px 5px 5px orangered;
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: cubic-bezier();
+
+        }
+
+        #text:hover {
+            color: black;
+            background-color: orangered;
+
+        }
+
+        #cross {
+            color: red;
+            font-size: 30px;
+            position: absolute;
+            left: 474px;
+            top: -40px;
+            cursor: pointer;
+        }
+
+        #btn1 {
+
+            text-align: center;
+            color: yellow;
+            font-size: 30px;
+            background-color: black;
+            border: 4px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            position: absolute;
+            left: 400px;
+            top: 350px;
+        }
+
+        .btn {
+            background-color: black;
+            color: cornsilk;
+            position: absolute;
+            top: 290px;
+            right: 30px;
+        }
+
+        #nav-bar {
+
+            width: 100%;
+
+        }
+
+        #nav-bar img {
+            width: 100%;
+            height: 130px;
+        }
+
+        #nav-bar h1 {
+            margin-left: 300px;
+            font-size: 50px;
+            animation-name: nav;
+            animation-timing-function: linear;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: 1s;
+            transition-property: position;
+            transition-duration: 2s;
+
+        }
+
+        @keyframes nav {
+
+            0% {
+                position: absolute;
+                top: 0px
+            }
+
+            100% {
+                position: absolute;
+                top: 200px
+            }
+
+        }
+
+
+        .form {
+
+            display: none;
+            width: 500px;
+            height: 400px;
+            background-color: black;
+            position: absolute;
+            top: 150px;
+            left: 300px;
+
+
+        }
+
+        #user {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid yellow;
+            color: yellow;
+        }
+
+        #password {
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            background: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid yellow;
+            color: yellow;
+        }
+
+        #email {
+            position: absolute;
+            top: 300px;
+            left: 100px;
+            background: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid yellow;
+            color: yellow;
+        }
+
+        #user1 {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            color: yellow;
+        }
+
+        #password1 {
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            color: yellow;
+        }
+
+
+        #email1 {
+            position: absolute;
+            top: 250px;
+            left: 100px;
+            color: yellow;
+        }
+
+        #stream1 {
+            color: yellow;
+            position: absolute;
+            top: 100px;
+            left: 300px;
+
+        }
+
+        #stream {
+
+            position: absolute;
+            top: 100px;
+            left: 400px;
+            color: yellow;
+
+            background-color: black;
+        }
+
+        .web {
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 100px;
+            font-size: 40px;
+
+        }
+
+        .web span {
+            color: deepskyblue;
+        }
+
+        .timeline {
+            margin-top: 100px;
+            max-width: 1200px;
+            position: relative;
+            height: 1000px;
+            display: none;
+        }
+
+        .timeline:after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            width: 6px;
+            background-color: yellowgreen;
+            left: 50%;
+        }
+
+        .container {
+
+            background-color: peachpuff;
+            border-radius: 5px;
+        }
+
+        .left:after {
+            position: absolute;
+            content: "";
+            border: 5px solid deeppink;
+            border-radius: 50%;
+            width: 25px;
+            top: 10px;
+            left: 406px;
+            height: 25px;
+            z-index: 1;
+            background-color: deepskyblue;
+
+        }
+
+        .right:before {
+            position: absolute;
+            content: "";
+            background-color: deepskyblue;
+            border: 5px solid deeppink;
+            border-radius: 50%;
+            width: 25px;
+            top: 20px;
+            right: 406px;
+            height: 25px;
+            z-index: 1;
+
+
+        }
+
+        .left {
+
+            position: absolute;
+            left: 180px;
+            width: 400px;
+            height: 200px;
+
+
+        }
+
+        .right {
+            position: absolute;
+            right: 170px;
+            top: 230px;
+            width: 400px;
+            height: 200px;
+
+
+        }
+
+        .left1 {
+
+            position: absolute;
+            top: 500px;
+            left: 180px;
+            width: 400px;
+            height: 200px;
+
+
+        }
+
+        .right1 {
+            position: absolute;
+            right: 170px;
+            top: 730px;
+            width: 400px;
+            height: 200px;
+
+
+        }
+
+        .left1:after {
+            position: absolute;
+            content: "";
+            border: 5px solid deeppink;
+            border-radius: 50%;
+            width: 25px;
+            top: 20px;
+            left: 406px;
+            height: 25px;
+            z-index: 1;
+            background-color: deepskyblue;
+
+        }
+
+        .right1:before {
+            position: absolute;
+            content: "";
+            background-color: deepskyblue;
+            border: 5px solid deeppink;
+            border-radius: 50%;
+            width: 25px;
+            top: 20px;
+            right: 406px;
+            height: 25px;
+            z-index: 1;
+
+
+        }
+
+        h1 {
+            color: blueviolet;
+        }
+
+        p {
+            font-size: 19px;
+            font-weight: 900;
+        }
+
+        .timeline-btn {
+
+            font-size: 40px;
+            background: deepskyblue;
+            color: black;
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 400px;
+            border-radius: 10px;
+        }
+
+        @media only screen and (max-width: 700px) {
+
+            #home {
+                text-decoration: none;
+                background: black;
+                color: orangered;
+                position: absolute;
+                top: 200px;
+                left: 20px;
+                width: 50px;
+                height: 30px;
+                font-size: 14px;
+                padding-top: 10px;
+                box-sizing: border-box;
+                vertical-align: middle;
+
+
+                text-align: center;
+            }
+
+            .share {
+                position: absolute;
+                top: 500px;
+                right: 60px;
+                background-color: #ff9100;
+                width: 60px;
+                color: white;
+                height: 60px;
+                z-index: 999;
+                overflow: hidden;
+                text-align: center;
+                line-height: 65px;
+                font-size: 1.5em;
+                display: none;
+                box-shadow: 0px 3px 9px rgba(0, 0, 0, .5);
+            }
+
+            .one,
+            .two,
+            .three {
+                display: none;
+                position: absolute;
+                top: 500px;
+                right: 60px;
+                width: 50px;
+                height: 50px;
+                color: #fff;
+                border-radius: 50%;
+                line-height: 49px;
+                font-size: 1.5em;
+                z-index: -1;
+            }
+
+            .share:hover {
+                cursor: pointer;
+            }
+
+            .one:hover,
+            .two:hover,
+            .three:hover .one {
+                background-color: #2196f3;
+            }
+
+            .two {
+                background-color: #00e5ff;
+            }
+
+            .three {
+                background-color: #6a1b9a;
+            }
+
+
+            .footer {
+                margin-top: 200px;
+                width: 100%;
+                height: 250px;
+                padding-top: 100px;
+
+                display: flex;
+                flex-direction: row;
+                background: #070617;
+
+                justify-content: space-around;
+
+            }
+
+            .col li {
+                list-style-type: none;
+            }
+
+            .col li a {
+                color: white;
+                list-style: none;
+                text-decoration: none;
+
+            }
+
+            .project li a {
+                color: white;
+
+                text-decoration: none;
+
+            }
+
+            .project li {
+                list-style: none;
+                ;
+            }
+
+            .project h1,
+            .col h1 {
+                color: white;
+                font-weight: 900;
+            }
+
+
+            .social {
+                width: 100%;
+                background: black;
+                height: 80px;
+                justify-content: center;
+                text-align: center;
+
+                display: flex;
+                justify-content: center;
+                justify-content: space-evenly;
+            }
+
+            .code img {
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+                margin-top:-10px;
+                display:none;
+            }
+
+
+            #btn2 {
+                text-align: center;
+                color: yellow;
+                font-size: 20px;
+                background-color: black;
+                border: 4px solid white;
+                border-radius: 10px;
+                cursor: pointer;
+                position: absolute;
+                left: 150px;
+                top: 350px;
+                width: 100px;
+                text-transform: capitalize;
+            }
+
+            #contact {
+
+                position: absolute;
+                top: 200px;
+                left: 150px;
+                color: black;
+
+            }
+
+            #img {
+                position: absolute;
+
+                height: 200px;
+                width: 100%;
+            }
+
+            #text {
+                font-size: 14px;
+                font-weight: 100;
+                background-color: black;
+                width: 200px;
+                border-radius: 10%;
+                color: yellow;
+                text-align: center;
+                display: none;
+                padding:10px;
+                position: absolute;
+                margin-left: -100px;
+                margin-top: 100px;
+                box-shadow: 5px 5px 5px orangered;
+                transition-property: all;
+                transition-duration: 2s;
+                transition-timing-function: cubic-bezier();
+
+            }
+
+            #text:hover {
+                color: black;
+                background-color: orangered;
+
+            }
+
+            #cross {
+                color: red;
+                font-size: 30px;
+                position: absolute;
+                left: 474px;
+                top: -40px;
+                cursor: pointer;
+            }
+
+            #btn1 {
+
+                text-align: center;
+                color: yellow;
+                font-size: 20px;
+                background-color: black;
+                border: 4px solid white;
+                border-radius: 10px;
+                cursor: pointer;
+                position: absolute;
+                left: 50px;
+                top: 350px;
+            }
+
+            .btn {
+                background-color: black;
+                color: cornsilk;
+                position: absolute;
+                top: 290px;
+                right: 30px;
+            }
+
+            #nav-bar {
+
+                width: 100%;
+
+            }
+
+            #nav-bar img {
+                width: 100%;
+                height: 130px;
+            }
+
+            #nav-bar h1 {
+                margin-left: -10px;
+                font-size: 40px;
+                animation-name: nav;
+                animation-timing-function: linear;
+                animation-duration: 1s;
+                animation-direction: alternate;
+                animation-iteration-count: 1s;
+                transition-property: position;
+                transition-duration: 2s;
+
+            }
+
+            .form {
+
+                display: none;
+                width: 500px;
+                height: 400px;
+                background-color: black;
+                position: absolute;
+                top: 150px;
+                left: 00px;
+
+
+            }
+
+            #user {
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                background: transparent;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 2px solid yellow;
+                color: yellow;
+            }
+
+            #password {
+                position: absolute;
+                top: 200px;
+                left: 100px;
+                background: transparent;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 2px solid yellow;
+                color: yellow;
+            }
+
+            #email {
+                position: absolute;
+                top: 300px;
+                left: 100px;
+                background: transparent;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 2px solid yellow;
+                color: yellow;
+            }
+
+            #user1 {
+                position: absolute;
+                top: 50px;
+                left: 100px;
+                color: yellow;
+            }
+
+            #password1 {
+                position: absolute;
+                top: 150px;
+                left: 100px;
+                color: yellow;
+            }
+
+
+            #email1 {
+                position: absolute;
+                top: 250px;
+                left: 100px;
+                color: yellow;
+            }
+
+            #stream1 {
+                color: yellow;
+                position: absolute;
+                top: 100px;
+                left: 300px;
+
+            }
+
+            #stream {
+
+                position: absolute;
+                top: 100px;
+                left: 400px;
+                color: yellow;
+
+                background-color: black;
+            }
+
+            .web {
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 100px;
+                font-size: 40px;
+
+            }
+
+            .web span {
+                color: deepskyblue;
+            }
+
+            .timeline {
+                margin-top: 100px;
+                max-width: 1200px;
+                position: relative;
+                height: 1000px;
+                display: none;
+            }
+
+            .timeline:after {
+                content: "";
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                width: 6px;
+                background-color: yellowgreen;
+                left: 50%;
+            }
+
+            .container {
+
+                background-color: peachpuff;
+                border-radius: 5px;
+            }
+
+            .left:after {
+                position: absolute;
+                content: "";
+                border: 5px solid deeppink;
+                border-radius: 50%;
+                width: 25px;
+                top: -15px;
+                left: -44px;
+                height: 25px;
+                z-index: 1;
+                background-color: deepskyblue;
+
+            }
+
+            .right:before {
+                position: absolute;
+                content: "";
+                background-color: deepskyblue;
+                border: 5px solid deeppink;
+                border-radius: 50%;
+                width: 25px;
+                top: 0px;
+                right: -30px;
+                height: 25px;
+                z-index: 1;
+
+
+            }
+
+            .left {
+
+                position: absolute;
+                left: 220px;
+                width: 170px;
+                height: auto;
+
+
+            }
+
+            .right {
+                position: absolute;
+                left:10px;
+                top: 230px;
+                width: 170px;
+                height: auto;
+
+
+            }
+
+            .left1 {
+
+                position: absolute;
+                top: 500px;
+                left: 220px;
+                width: 170px;
+                height: auto;
+
+
+            }
+
+            .right1 {
+                position: absolute;
+                left: 10px;
+                top: 730px;
+                width: 170px;
+                height: auto;
+
+
+            }
+
+            .left1:after {
+                position: absolute;
+                content: "";
+                border: 5px solid deeppink;
+                border-radius: 50%;
+                width: 25px;
+                top: -15px;
+                left: -44px;
+                    height: 25px;
+                z-index: 1;
+                background-color: deepskyblue;
+
+            }
+
+            .right1:before {
+                position: absolute;
+                content: "";
+                background-color: deepskyblue;
+                border: 5px solid deeppink;
+                border-radius: 50%;
+                width: 25px;
+                top: 0px;
+                right: -30px;
+                height: 25px;
+                z-index: 1;
+
+
+            }
+
+            h1 {
+                color: blueviolet;
+            }
+
+            p {
+                font-size: 13px;
+                font-weight: 900;
+            }
+
+            .timeline-btn {
+
+                font-size: 40px;
+                margin-left: 10px;
+                background: deepskyblue;
+                color: black;
+                position: absolute;
+                margin-top: 50px;
+
+            }
+            
+
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <a id="home" href="index.html">
+        Home
+    </a>
+    <div class="share">
+        <i class="fa fa-plus"></i>
+    </div>
+    <div class="one">
+        <i class="fa  fa-facebook"></i>
+    </div>
+    <div class="two">
+        <i class="fa  fa-twitter"></i>
+    </div>
+    <div class="three">
+        <i class="fa  fa-instagram"></i>
+    </div>
+
+
+    <div id="nav-bar">
+
+        <img src="contact-us-1908762_640.png"" id=" img">
+
+        <h1 id="contact">
+            Contact Us
+
+        </h1>
+        <br><br> <br><br><br><br><br> <br><br><br><br><br> <br> <br>
+
+        <p id="text">
+
+            HI There,<br>get in touch with us for <br>latest Code tricks , Real world Projects <br>with Source code
+            Explation.
+            <br>
+            A lot more<br>
+            For This you simply click on <br>signUp button so, our team easily connect with you.
+        </p>
+
+        <button id="btn1" onclick="display()">
+            Sign Up
+        </button>
+        <button id="btn2" onclick="display1()">
+            info
+        </button>
+    </div>
+    <div class="form" id="form">
+
+
+        <form method="POST" action="registration.html">
+
+            <p id="cross" onclick="none()">
+                &#10006;
+            </p>
+            <label id="user1"> Name:</label><br>
+            <input type="text" placeholder="Enter your username" id="user" name="name">
+            <br>
+            <label id="password1"> Password:</label><br>
+
+            <input type="password" placeholder="Enter your password" id="password" name="password">
+            <br>
+            <label id="stream1">
+                Stream: </label><br>
+            <select id="stream">
+                <option>
+                    C.S.E
+                </option>
+                <option>
+                    E.C.E
+                </option>
+                <option>
+                    Mechnical
+                </option>
+                <option>
+                    Chemical
+                </option>
+                <option>
+                    Civil
+                </option>
+
+
+
+
+            </select>
+
+            <br>
+            <label id="email1">
+                Email
+            </label>
+            <input type="text" placeholder="Enter your email" id="email" name="email" <button class="btn" type="submit"
+                name="submit">
+            Submit
+            </button>
+        </form>
+        <br> <br><br><br><br><br><br><br><br><br> <br>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="svg">
+            <path fill="yellow" fill-opacity="1"
+                d="M0,192L48,186.7C96,181,192,171,288,160C384,149,480,139,576,154.7C672,171,768,213,864,208C960,203,1056,149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 00 600 290">
+        <path fill="lightgreen" fill-opacity="1"
+            d="M0,192L48,186.7C96,181,192,171,288,160C384,149,480,139,576,154.7C672,171,768,213,864,208C960,203,1056,149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+
+
+
+    <br><br>
+
+    <h1 class="web"> Road To Web<span> development</span></h1>
+    <button class="timeline-btn">
+        Click me
+    </button>
+    <br>
+    <br>
+    <div class="timeline">
+        <div class="container left">
+            <h1>
+                HTML
+            </h1>
+            <p>
+                is the most basic building block of the web.
+                <br>
+                it defines the meaning and structure of web content.
+            </p>
+        </div>
+
+        <div class="container right">
+            <h1>
+                CSS3
+            </h1>
+            <p>
+                Css3 is the latest version of css specifications.
+                <br>Css3 adds several new styling features and improvement
+                to enhance the web presentation.
+
+            </p>
+
+        </div>
+        <div class="container left1">
+            <h1>
+                Javascript
+            </h1>
+            <p>
+                javscript is client scripting language which is used<br>
+                for creating web pages.It is a standalone language<br>
+                developed in Netscape.
+            </p>
+        </div>
+
+        <div class="container right1">
+            <h1>
+                PHP
+            </h1>
+            <p>
+                The PHP Hypertext preprocessor(PHP) is a programming language<br>
+                that allows web developers to create dynamic content
+                interacts with databases.
+
+            </p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="col">
+            <h1>
+                Menus<i class="fa fa-menu" arial-hidden="true" style="color:blue;"></i>
+            </h1>
+            <ul>
+                <li>
+                    <a href="aboutus.html"> About&nbsp;&nbsp; <i class="fa fa-address-card" arial-hidden="true"
+                            style="color:blue;"></i> </a></li>
+
+                <li>
+                    <a href="codeeditor.html"> Code Editor </a><span style="font-size:24px;color:yellow;">&nbsp;&nbsp;
+                        &#9756;</span>
+                </li>
+                <li>
+                    <a href="#">Email</a>&nbsp;&nbsp;<i class="fa fa-envelope" arial-hidden="true"
+                        style="color:brown;"></i>
+                </li>
+                <b style="color:yellow;">rajeevupadhyay608@gmail.com</b>
+                <li>
+                    <a href="contactus.html">
+                        Contact us &nbsp;<i class="fa fa-phone" arial-hidden="true" style="color:green;"></i>
+                    </a>
+                    <br>
+
+                    <b style="color:green;">8800382980</b>
+                </li>
+            </ul>
+
+
+        </div>
+
+        <div class="project">
+            <h1>
+                Project IN
+            </h1>
+            <ul>
+                <li>
+                    <a href="#"> HTML&nbsp;&nbsp; <i class="" arial-hidden="true" style="color:blue;"></i></a></li>
+                <li>
+                    <a href="#">Css3</a></li>
+                <li>
+                    <a href="#"> JAVASCRIPT</a>
+                </li>
+                <li>
+                    <a href="#">Java</a>
+                </li>
+                <li>
+                    <a href="#">
+                        C++
+                    </a>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+        <div class="code">
+            <img src="345.png">
+        </div>
+
+    </div>
+    <div class="social">
+
+        <i class="fa fa-instagram" style="color:rgb(64,93,230);font-size:40px;"></i>
+        <i class="fa fa-facebook" style="color:#3b5998;font-size:40px;"></i>
+        <i class="fa fa-youtube-play" style="  color:red;border:50%;font-size:40px;"></i>
+
+    </div>
+    <div class="developer" style="width:100%;background:brown;height:40px;margin-top: -30px;">
+        <h3 style="text-align: center;">
+            <marquee>2020 &copy; &nbsp;Developed BY RUTECH &#174</marquee>
+        </h3>
+
+
+
+
+        <script>
+
+
+
+            function display() {
+
+                document.getElementById("form").style.display = "block";
+
+
+            }
+            function none() {
+
+                document.getElementById("form").style.display = "none";
+
+            }
+            var x = 0;
+            function display1() {
+                if (x == 0) {
+                    document.getElementById("text").style.display = "block";
+                    x = 1;
+                }
+                else {
+                    document.getElementById("text").style.display = "none";
+                    x = 0;
+                }
+            }
+        </script>
+        <script>
+
+
+
+            $(function () {
+                var flag = 0;
+
+                $('.share').click(function () {
+                    if (flag == 0) {
+                        $('.one').css({ "background": "blue", "text-align": "center", }).animate({
+                            top: '350px',
+                            right: '40px',
+                        }, 200);
+
+                        $('.two').delay(200).css({ "text-align": "center", }).animate({
+                            top: '370px',
+                            right: '200px'
+                        }, 200);
+
+                        $('.three').css({ "text-align": "center", "background": "violet" }).delay(100).animate({
+                            top: '400px',
+                            right: '120px'
+                        }, 200);
+
+
+                        flag = 1;
+                    }
+
+
+                    else {
+                        $('.one, .two, .three').animate({
+                            top: '500px',
+                            right: '60px'
+                        }, 200);
+
+                        flag = 0;
+                    }
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+
+                $(".timeline-btn").click(function () {
+
+                    $(".timeline").toggle(3000);
+                });
+
+
+            });
+
+
+        </script>
+
+
+</body>
+
+</html>

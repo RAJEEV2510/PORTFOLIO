@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+ 
+<script src="jquery.js"></script>
+<style>
+    *{
+        margin: 0px;
+        
+    }
+    #home{
+            text-decoration: none;
+            color: tomato;
+            width:100px;
+            height: 50px;
+            font-size: 20px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            
+
+            text-align: center;
+        }
+
+    .code img {
+            border-radius: 50%;
+            height: 160px;
+            width: 150px;
+            position: sticky;
+        }
+
+        .social {
+            width: 100%;
+            background:black;
+            height: 100px;
+            display:flex;
+            
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .social i{
+            line-height: 60px;
+        }
+        .footer {
+            margin-top: 200px;
+            width: 100%;
+            height: 250px;
+            padding-top: 100px;
+
+            display: flex;
+            flex-direction: row;
+            background: #070617;
+
+            justify-content: space-around;
+
+        }
+
+        .col li {
+            list-style-type: none;
+        }
+
+        .col li a {
+            color: white;
+            list-style: none;
+            text-decoration: none;
+
+        }
+
+        .project li a {
+            color: white;
+
+            text-decoration: none;
+
+        }
+
+        .project li {
+            list-style: none;
+            ;
+        }
+
+        .project h1,
+        .col h1 {
+            color: white;
+            font-weight: 900;
+        }
+   
+ 
+    .project1{
+
+        height: 400px;
+        width: 500px;
+        margin-top: 140px;
+
+    }
+    .project1 h3{
+        font-size: 40px;
+        font-weight: 900;
+    }
+    .img1
+    {
+        height: 300px;
+        width: 400px;
+    }
+    #pre{
+        display: none;
+    }
+    .header{
+    
+    background:yellowgreen;
+    border-radius:5%;
+}
+#viewer{
+    background: white;
+    border: none;
+    width:43%;
+    margin: 10px;
+    position: absolute;
+    top:1150px;
+    right:20px;
+    border-radius: 10px;
+    border:10px solid dodgerblue;
+    height: 200px;
+}
+
+
+#editor-textarea{
+
+width:50%;
+height:200px;
+margin:10px;
+background:#070617;
+color:white;
+font-family: cursive;
+border:10px solid dodgerblue;
+border-radius: 10px;
+}
+
+
+#head{
+
+    position: absolute;;
+    top:1090px;
+    right:300px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+    .main{
+    
+    width:100%;
+    height: 95%;
+    
+
+}
+    .wave{
+
+     height: 500px;
+    width:100%;
+    background-color:rgb(165, 100, 165);
+      }
+      .wave h1{
+          position:absolute;
+           top:150px;
+           letter-spacing: 3px;
+        left:200px;
+         font-size: 55px;
+         font-weight: 500;
+         text-shadow: 1px 1px 5px black;
+      }
+      #p{
+        position:absolute;
+           top:300px;
+        font-size: 25px;
+        word-spacing: 3px;
+        letter-spacing: 3px;
+        left:300px;
+        text-shadow: 1px 1px 5px black;
+        
+      }
+    .nav h1{
+        font-size:40px;
+        background-color:orangered;
+        text-align: center;
+    }
+    .change-content:after{
+
+        font-size: 40px;
+        color: #00b894;
+        content: "";
+        animation-name: para;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        font-weight:900;
+        border-radius: 10%;
+        border:2px solid white;
+
+    }
+    
+    @keyframes para {
+        0%{
+            content: "learn Javasript";
+        }
+        20%{
+            content: "learn Jquery";
+        } 
+        40%{
+            content: "learn php";
+        } 
+        60%{
+            content: "learn reactjs";
+        } 
+        80%{
+            content: "learn angular";
+        }
+        90%{
+            content: "learn Nodejs";
+        }
+       100%{
+            content: "learn json";
+        }
+        
+    }
+    @media only screen and (max-width: 700px) {
+
+        #home{
+            text-decoration: none;
+            color: tomato;
+            width:100px;
+            height: 50px;
+            font-size: 20px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            
+
+            text-align: center;
+        }
+
+    .code img {
+            top:1200px;
+            display: none;
+            border-radius: 50%;
+            height: 160px;
+            width: 150px;
+            position: absolute;;
+            
+        }
+
+        .social {
+            width: 100%;
+            background:black;
+            height: 100px;
+            display:flex;
+            
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .social i{
+            line-height: 60px;
+        }
+        .footer {
+            margin-top: 200px;
+            width: 100%;
+            height: 250px;
+            padding-top: 100px;
+
+            display: flex;
+            flex-direction: row;
+            background: #070617;
+
+            justify-content: space-around;
+
+        }
+
+        .col li {
+            list-style-type: none;
+            
+        }
+        .col{
+            margin-left: 20px;
+        }
+     .b{
+    margin-left: -40px;
+            
+        }
+
+        .col li a {
+            margin-left: -40px;
+            color: white;
+            list-style: none;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .project li a {
+            color: white;
+
+            text-decoration: none;
+
+        }
+
+        .project li {
+            list-style: none;
+            ;
+        }
+
+        .project h1,
+        .col h1 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+   
+ 
+    .project1{
+
+        height: 400px;
+        width: 500px;
+        margin-top: 140px;
+
+    }
+    .project1 h3{
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .img1
+    {
+        height: 300px;
+        width: 400px;
+    }
+    #pre{
+        display: none;
+    }
+    .header{
+    
+    background:yellowgreen;
+    border-radius:5%;
+
+}
+#viewer{
+    background: white;
+    border: none;
+    width:140px;
+    margin: 10px;
+    position: absolute;
+    top:1200px;
+    left:20px;
+    border-radius: 10px;
+    border:10px solid dodgerblue;
+    height: 200px;
+}
+
+
+#editor-textarea{
+
+width:160px;
+height:150px;
+margin:10px;
+background:#070617;
+color:white;
+font-family: cursive;
+border:10px solid dodgerblue;
+border-radius: 10px;
+}
+
+
+#head{
+
+    position: absolute;;
+    top:1160px;
+    right:200px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+    .main{
+    padding-bottom: 100px;
+    width:100%;
+    height: 95%;
+    
+    
+
+}
+    .wave{
+
+     height: 300px;
+    width:100%;
+    background-color:rgb(165, 100, 165);
+      }
+      .wave h1{
+          position:absolute;
+           top:100px;
+           letter-spacing: 3px;
+        left:20px;
+         font-size: 15px;
+         font-weight: 500;
+         text-shadow: 1px 1px 5px black;
+      }
+      #p{
+        position:absolute;
+           top:140px;
+        font-size: 14px;
+        word-spacing: 3px;
+        letter-spacing: 3px;
+        left:20px;
+        text-shadow: 1px 1px 5px black;
+        
+      }
+    .nav h1{
+        font-size:20px;
+        background-color:orangered;
+        text-align: center;
+    }
+    .change-content:after{
+
+        font-size: 10px;
+        color: #00b894;
+        content: "";
+        animation-name: para;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        font-weight:900;
+        border-radius: 10%;
+        border:2px solid white;
+
+
+    }
+    .wave svg{
+        position: absolute;
+        top:250px;
+    }
+    .code img{
+        display: none;
+    }
+    }</style>
+</head>
+
+<body background="red">
+ 
+    <pre id="pre">
+
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+            &lt;style&gt;
+           .div10{
+               height:20px;
+               width:500px;
+               background: black;
+            
+           }
+           .progress{
+            
+               height:20px;
+               width:30px;;
+               background: red;
+               
+        
+        
+           }
+            &lt;/style&gt;
+        &lt;script src="jquery.js"&gt;
+        &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;button id="btn10"&gt;
+                See my HTML Skills
+            &lt;/button&gt;
+            &lt;br&gt; &lt;br&gt; 
+            &lt;div class="div10" id="div10"&gt;
+        
+                &lt;div class="progress" id="item10"&gt;
+                    &lt;p id="p10"&gt; 10%
+                        &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;button id="btn20"&gt;
+                    See my C++
+                &lt;/button&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+            &lt;div class="div10" id="div20"&gt;
+        
+                    &lt;div class="progress" id="item20"&gt;
+                     &lt;P id="p20"&gt;  10%&lt;/P&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+                &lt;button id="btn30"&gt;
+                        See my Jquery Skills
+                    &lt;/button&gt;
+                    &lt;br&gt;
+                    &lt;br&gt;
+                &lt;div class="div10" id="div30"&gt;
+        
+                        &lt;div class="progress" id="item30"&gt;
+                       &lt;p id="p30"&gt;10%&lt;/P&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;br&gt;
+                    &lt;button id="btn40"&gt;
+                            See my Javascript Skills
+                        &lt;/button&gt;
+                        &lt;br&gt;
+                        &lt;br&gt;
+                    &lt;div class="div10" id="div40"&gt;
+        
+                            &lt;div class="progress" id="item40"&gt;
+               &lt;p id="p40"&gt;                 10%&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+               &lt;script&gt;
+               $(document).ready(function(){
+        
+                $("#btn10").click(function(){
+        
+                    $("#div10").animate({"border-radius":"20px"});
+                    $("#p10").html("70%");        
+                    $("#p10").animate({"margin-left":"200px","margin-top":"5px"},2000);
+                        $("#item10").animate({"width":"460px"},2000);
+                        
+                        $("#item10").animate({"font-size":"20px"},2000);
+                        $("#item10").css({"background-color":"Yellow"},2000);
+                        $("#item10").css("border-radius","10px");
+                        
+                        
+                    
+                   
+                });
+                $("#btn20").click(function(){
+        
+                    $("#div20").animate({"border-radius":"20px"});
+        $("#item20").animate({"width":"360px"});
+        
+        $("#p20").text("60%");  
+        $("#p20").animate({"margin-left":"200px","margin-top":"5px"},2000);
+        $("#item20").animate({"font-size":"20px"},2000);
+         $("#item20").css({"background-color":"violet"},2000);
+        $("#item20").css("border-radius","10px");
+                        
+        
+        });
+        
+        
+        
+        $("#btn30").click(function(){
+        
+           
+            $("#div30").animate({"border-radius":"20px"});
+        $("#item30").animate({"width":"300px"});
+        $("#p30").animate({"margin-left":"200px","margin-top":"5px"},2000);
+        $("#item30").css({"background-color":"green"},1000);
+        $("#item30").css("border-radius","10px");
+        
+        $("#p30").text("57%");
+        $("#item30").animate({"font-size":"20px"},2000);
+        });
+        
+        $("#btn40").click(function(){
+        
+            $("#div40").animate({"border-radius":"20px"});
+        $("#item40").animate({"width":"220px"});
+        $("#p40").animate({"margin-left":"190px","margin-top":"5px"},2000).text("40%");
+        $("#item40").css({"background-color":"lightblue"},1000);
+        $("#item40").css("border-radius","10px");
+        
+        
+        
+        
+        });
+        
+               });
+               &lt;/script&gt;
+        
+                 &lt;/body&gt;
+        &lt;/html&gt;        
+    </pre>
+    <div class="nav">
+
+            <h1>
+            Projects
+          </h1>
+
+        </div>
+
+        <div  class="wave">
+            <h1>  In this Page  you will see small projects
+               ,Which will Really Help You.
+           </h1>
+           <p id="p">
+               "HTML and Css is Not enough" <br><span class="change-content"></span>
+           </p>
+            <br><br><br><br> <br><br><br><br> <br> <br><br>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#fff" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,160C384,149,480,139,576,154.7C672,171,768,213,864,208C960,203,1056,149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+              </svg> 
+        </div>
+        <div class="project1">
+            <h3>
+                How TO make Progess-bar
+            </h3>
+            <img src="project1.png" class="img1">
+
+        </div>
+        <div class="header">
+            <button id="btn1"onclick="refresh()" style="background:black;width: 100px;color:yellow;border-radius:10px; height: 40px;font-size: 20px;font-weight: 900;text-align: center; ">
+             <div >   Run </div>
+            </button>
+            <button id="btn2"onclick="text()" id="btn1"style="background:black;width: 100px;color:yellow;border-radius:10px; height: 40px;font-size: 18px;font-weight: 900;text-align: center; text-transform: capitalize;margin-left:40px;margin-right:40px;margin-bottom:20px;">
+                    <div id="btn-1">   Write </div>
+                </button>
+            <button id="btn3"onclick="cl()"style="background:black;width: 100px;color:yellow;border-radius:10px; height: 40px;font-size: 20px;font-weight: 900;text-align: center; ">
+                    Clear
+                </button>
+                <h1 id="head">
+                    OUTPUT
+                    <i class="fa fa-hand-o-down"></i>
+                </h1>
+        
+               
+
+        <div class="main">
+            <textarea id="editor-textarea"> 
+                
+            </textarea>
+            <iframe src="" frameborder="0" id="viewer">
+    
+            </iframe>
+        </div>
+        <div class="footer">
+            <div class="col">
+                <h1>
+                    Menus<i class="fa fa-menu" arial-hidden="true"style="color:blue;"></i> 
+                </h1>
+                <ul>
+                    <li>
+                        <a href="aboutus.html"> About&nbsp;&nbsp; <i class="fa fa-address-card" arial-hidden="true"style="color:blue;"></i>   </a></li>
+                  
+                    <li>
+                        <a href="codeeditor.html"> Code Editor </a><span style="font-size:24px;color:yellowgreen;">&nbsp;&nbsp; &#9756;</span>
+                    </li>
+                    <li>
+                        <a href="#">Email</a>&nbsp;&nbsp;<i class="fa fa-envelope" arial-hidden="true" style="color:brown;"></i>
+                       <br>
+                        <b style="color:yellow;"class="b">rajeevupadhyay608@gmail.com</b>
+                    </li>
+                    
+                    <li>
+                        <a href="contactus.html">
+                            Contact us &nbsp;<i class="fa fa-phone" arial-hidden="true" style="color:green;"></i>  
+                        </a>
+                        <br>
+                        <b style="color:green;" class="b">8800382980</b>
+                    </li>
+                </ul>
+    
+    
+            </div>
+    
+            <div class="project">
+                <h1>
+                    Project IN
+                </h1>
+                <ul>
+                    <li>
+                        <a href="#"> HTML&nbsp;&nbsp; <i class="" arial-hidden="true"style="color:blue;"></i></a></li>
+                    <li>
+                        <a href="#">Css3</a></li>
+                    <li>
+                        <a href="#"> JAVASCRIPT</a>
+                    </li>
+                    <li>
+                        <a href="#">Java</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            C++
+                        </a>
+                    </li>
+                </ul>
+    
+    
+    
+    
+            </div>
+            <div class="code">
+                <img src="345.png">
+            </div>
+    
+        </div>
+        <div class="social">
+           <a id="home" href="index.html">
+              go to Home
+           </a>
+                <i class="fa fa-instagram" style="color:rgb(64,93,230);font-size:40px;"></i>
+                        <i class="fa fa-facebook" style="color:#3b5998;font-size:40px;"></i>
+                             <i class="fa fa-youtube-play" style="  color:red;border:50%;font-size:40px;"></i>
+                       
+        </div>
+        <div class="developer" style="width:100%;background:brown;height:40px;margin-top: -30px;">
+            <h3 style="text-align: center;"><marquee>Developed BY RUTECH &#174</marquee></h3>
+        </div>
+    
+        <script>
+            function text(){
+            
+                var d= document.getElementById("pre").textContent;
+                document.getElementById("editor-textarea").value=d;           
+                
+            }
+            
+            function refresh(){
+                var editor=document.getElementById("editor-textarea").value;
+                document.getElementById("viewer").style.height="530px";
+                document.getElementById("viewer").srcdoc=editor;
+            
+            }
+            function cl(){
+             
+                document.getElementById("editor-textarea").value="<html><head></head><body></body </html>";
+               
+                   }
+            </script>    
+            
+        <script>
+            $(document).ready(function(){
+        
+                $("#btn2").click(function(){
+                 $(".main").animate({"height":"590px"}).css("background","lightblue");   
+                 $("#editor-textarea").animate({"height":"550px"},2000);
+                 $(this).css("border","5px double red").fadeOut().fadeIn(2000);   
+                
+                 
+                });
+                $("#btn1").click(function(){
+                  
+                 
+                 $(this).css("border","5px double red").fadeOut().fadeIn(2000);   
+                
+                 
+                });$("#btn3").click(function(){
+                 
+                 $(this).css("border","5px double red").fadeOut().fadeIn(2000);   
+                
+                 
+                });
+        
+            });
+            
+        
+        </script>
+        
+           
+</body>
+</html>

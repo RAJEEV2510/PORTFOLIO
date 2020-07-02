@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <script>
+        function fn() {
+            var x = document.getElementById("nav1").style.display;
+
+
+            if (x === "flex") {
+                document.getElementById("nav1").style.display = "none";
+
+            }
+            else {
+                document.getElementById("nav1").style.display = "flex";
+                document.getElementById("nav1").style.flexDirection = "column";
+                document.getElementById("nav1").style.marginTop = "200px";
+                document.getElementById("nav1").style.marginLeft = "-100px";
+
+
+
+                document.getElementById("nav1").style.background = "transparent";
+            }
+        }
+    </script>
+    <style>
+        .share {
+            position: absolute;
+            top: 1400px;
+            right: 60px;
+            background-color: #ff9100;
+            width: 60px;
+            color: white;
+            height: 60px;
+            z-index: 999;
+            overflow: hidden;
+            text-align: center;
+            line-height: 65px;
+            font-size: 1.5em;
+            box-shadow: 0px 3px 9px rgba(0, 0, 0, .5);
+        }
+
+        .one,
+        .two,
+        .three {
+            position: absolute;
+            top: 1400px;
+            right: 60px;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 49px;
+            font-size: 1.5em;
+            z-index: -1;
+        }
+
+        .share:hover {
+            cursor: pointer;
+        }
+
+        .one:hover,
+        .two:hover,
+        .three:hover .one {
+            background-color: #2196f3;
+        }
+
+        .two {
+            background-color: #00e5ff;
+        }
+
+        .three {
+            background-color: #6a1b9a;
+        }
+
+        #theme {
+
+            background: transparent;
+            cursor: pointer;
+            color: black;
+            position: absolute;
+            top: 160px;
+            font-size: 20px;
+            border: 2px solid black;
+
+            z-index: -1;
+
+
+        }
+
+        .code img {
+            border-radius: 50%;
+            height: 160px;
+            width: 150px;
+            position: sticky;
+        }
+
+        .social {
+            width: 100%;
+            background: black;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .footer {
+            margin-top: 200px;
+            width: 100%;
+            height: 250px;
+            padding-top: 100px;
+
+            display: flex;
+            flex-direction: row;
+            background: #070617;
+
+            justify-content: space-around;
+
+        }
+
+        .col li {
+            list-style-type: none;
+        }
+
+        .col li a {
+            color: white;
+            list-style: none;
+            text-decoration: none;
+
+        }
+
+        .project li a {
+            color: white;
+
+            text-decoration: none;
+
+        }
+
+        .project li {
+            list-style: none;
+            ;
+        }
+
+        .project h1,
+        .col h1 {
+            color: white;
+            font-weight: 900;
+        }
+
+        #img20 {
+            width: 197px;
+            height: 140px;
+            border: 2px solid black;
+        }
+
+        #h20 {
+            margin-top: 100px;
+            width: 300px;
+            padding: 20px;
+            margin-left: 400px;
+            border-radius: 40% 90% 50% 10%/30% 30% 70% 70%;
+            background-image: linear-gradient(lightblue, lightgray);
+        }
+
+        #btn10,
+        #btn20,
+        #btn30,
+        #btn40 {
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 10px;
+            text-align: center;
+            padding: 6px 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 5px;
+            color: #fff;
+            display: inline-block;
+            margin-right: 50px;
+            background-image: linear-gradient(#4458dc, #854fee);
+        }
+
+        #h10 {
+            width: 40%;
+            color: black;
+            background-image: linear-gradient(#8d98e3 40%, #854fee 60%);
+            padding-left: 100px;
+            box-sizing: border-box;
+            position: relative;
+            left: -100px;
+            animation: aagepiche 2s linear infinite;
+            animation-direction: alternate;
+        }
+
+        #div50 {
+            margin-left: 200px;
+            margin-top: 100px;
+        }
+
+        .div10 {
+
+            height: 30px;
+            width: 500px;
+            background: brown;
+
+        }
+
+        .progress1 {
+
+            height: 20px;
+            width: 30px;
+            ;
+            background: red;
+
+
+
+        }
+
+        label .b {
+            margin-left: 200px;
+        }
+
+        .prgs {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            justify-content: space-around;
+        }
+
+        .progress {
+
+            width: 600px;
+            height: 30px;
+            margin-left: 200px;
+            margin-bottom: 20px;
+            border: 2px solid gray;
+            background: black;
+        }
+
+        .progress1 {
+            width: 20px;
+            height: 30px;
+            background: #854fee;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to left, #fff 80%, #c3f5ff 20%)
+        }
+
+        .navsection {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            background-image: linear-gradient(to top, #fff 80%, #c3f5ff 20%);
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .logo {
+            width: 40%;
+            color: #fff;
+            background-image: linear-gradient(#8d98e3 40%, #854fee 60%);
+            padding-left: 100px;
+            box-sizing: border-box;
+            position: relative;
+            left: -100px;
+            animation: aagepiche 2s linear infinite;
+            animation-direction: alternate;
+        }
+
+        .logo h1 {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+
+        @keyframes aagepiche {
+            from {
+                padding-left: 0px;
+            }
+
+            to {
+                padding-left: 150px;
+
+            }
+        }
+
+        nav {
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: 900;
+            font-size: 17px;
+            text-transform: capitalize;
+            transition-property: background;
+            transition-delay: 1s;
+            transition: all 1s;
+        }
+
+        nav a:first-child {
+            color: #4458dc;
+        }
+
+        nav a:hover {
+
+            text-decoration: underline;
+            background: lightgray;
+            padding: 10px;
+            animation-name: av;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+
+        }
+
+        img {
+            height: 400px;
+            width: 400px;
+        }
+
+        main {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .rightside {
+            max-width: 400%;
+
+        }
+
+        .item {
+            width: 200px;
+            height: 250px;
+            background: whitesmoke;
+            box-shadow: 2px 2px 10px blueviolet;
+            transition: all 1s;
+        }
+
+        .item img {
+            width: 200px;
+            height: 150px;
+        }
+
+        .item:hover {
+            background-color: orangered;
+            height: 255px;
+        }
+
+        .card {
+            flex-wrap: wrap;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        #div1 {
+            position: absolute;
+            top: 190px;
+            width: 100px;
+            height: 100px;
+            border-radius: 04% 10% 70% 10%/30% 30% 70% 70%;
+            background: red;
+            left: 400px;
+        }
+
+        .leftside:after {
+
+            content: "";
+            width: 450px;
+            height: 3px;
+            position: absolute;
+            top: 48%;
+            left: 15%;
+            background: black;
+        }
+
+        .leftside h1 {
+            margin-top: 20px;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+            font-size: 70px;
+        }
+
+        .leftside h2 {
+            margin-top: 20px;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+            word-spacing: 10px;
+            font-weight: 500px;
+        }
+
+        .btn1,
+        .btn2 {
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 14px;
+            text-align: center;
+            padding: 12px 25px;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 5px;
+            color: #fff;
+            display: inline-block;
+            margin-right: 50px;
+            background-image: linear-gradient(#4458dc, #854fee);
+        }
+
+        #img1 {
+            height: 50px;
+            width: 50px;
+            display: none;
+        }
+
+        @keyframes av {
+            from {
+
+                color: black;
+
+            }
+
+            to {
+
+
+                color: blue;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+
+
+            
+        #div50 {
+            margin-left: 00px;
+            margin-top: 100px;
+        }
+            .code img {
+                border-radius: 50%;
+                height: 160px;
+                width: 150px;
+                display: none;
+            }
+
+            .col li a {
+                margin-left: -23px;
+                color: white;
+                list-style: none;
+                text-decoration: none;
+                font-size: 10px;
+            }
+
+            .project li a {
+                color: white;
+                font-size: 13px;
+
+                text-decoration: none;
+
+            }
+
+            .project li {
+                list-style: none;
+
+            }
+
+            .col h1 {
+                font-size: 20px;
+                margin-left: 30px;
+            }
+
+            .project h1,
+            .col h1 {
+                color: white;
+
+
+                margin-bottom: 20px;
+            }
+
+            header {
+
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .leftside:after {
+
+                display: none;
+                position: absolute;
+                top: 47%;
+                left: 170px;
+
+
+            }
+
+            nav {
+
+                display: none;
+
+
+            }
+
+            .logo {
+                height: 50px;
+                position: absolute;
+                left: 0px;
+            }
+
+            img {
+                height: 220px;
+                width: 200px;
+            }
+
+            main {
+                margin-top: 100px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .btn1,
+            .btn2 {
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 10px;
+                text-align: center;
+                padding: 6px 12px;
+                cursor: pointer;
+                text-transform: uppercase;
+                border-radius: 5px;
+                color: #fff;
+                display: inline-block;
+                margin-right: 50px;
+                background-image: linear-gradient(#4458dc, #854fee);
+            }
+
+            .logo h1 {
+                font-size: 10px;
+            }
+
+            .leftside h1 {
+                font-size: 20px;
+            }
+
+            #img1 {
+
+                margin-left: 250px;
+                display: block;
+            }
+
+            #div1 {
+                display: none;
+            }
+
+            .b {
+                margin-left: -23px;
+
+                font-size: 10px;
+
+            }
+        
+        #btn10{
+            font-size: 10px;
+        }
+        #btn20{
+            font-size: 10px;
+        }  #btn30{
+            font-size: 10px;
+        }  #btn40{
+            font-size: 10px;
+        }
+        .div10{
+
+           width : 530px;
+        }
+        #h10{
+            margin-left: 100px;
+            width: 300px;
+        }
+        #v1{
+            margin-left: -30px;
+            margin-bottom: 250px;
+        }
+        #v2{
+            margin-left: 30px;
+            margin-bottom: 150px;
+        }#v3{
+            margin-left: 30px;
+            margin-bottom: 100px;
+        }
+       #h20{
+           margin-left: 10px;
+           font-size: 20px;
+       }
+        }
+    </style>
+    <script src=jquery.js>
+    </script>
+</head>
+
+<body id="body">
+
+
+
+    <button id="theme" onclick="theme()">
+        Dark Mode
+    </button>
+    <div class="share">
+        <i class="fa fa-plus"></i>
+    </div>
+    <div class="one">
+        <i class="fa  fa-facebook"></i>
+    </div>
+    <div class="two">
+        <i class="fa  fa-twitter"></i>
+    </div>
+    <div class="three">
+        <i class="fa  fa-instagram"></i>
+    </div>
+
+
+    <header>
+
+        <section class="navsection">
+            <div class="logo">
+                <h1>
+                    Rajeev Upadhyay
+                </h1>
+            </div>
+            <img id="img1" onclick="fn()" src="C:\Users\RAJEEV KUMAR\Desktop\icons8-menu-64.png">
+
+            <nav id="nav1">
+
+                <a id="a1" href="#">Home</a>
+                <a href="codeeditor.html">Code Editor</a>
+             
+                <a href="project.html">Projects</a>
+                <a href="contactus.html">contact</a>
+                <a href="aboutus.html">About</a>
+            </nav>
+
+        </section>
+        <main>
+            <div class="leftside">
+                <h3>
+                    Hello
+                </h3>
+                <h1>
+                    Rajeev Upadhyay,
+                </h1>
+                <h2>
+                    Student & Programmer
+                </h2>
+                <a href="contactus.html" class="btn1">
+                    Hire ME!
+                </a>
+                <a href="contactus.html" class="btn2">
+                    Contact ME!
+                </a>
+
+            </div>
+            <div class="rightside">
+                <img src="C:\Users\RAJEEV KUMAR\Desktop\rajeev.png">
+
+
+        </main>
+        </div>
+        <div id="div1">
+
+        </div>
+    </header>
+    <h1 id="h20">
+        <span style="font-size: 60px;color:midnightblue;">P</span>ROJECTS:
+
+    </h1>
+
+
+    <div class="card">
+        <br>
+        <br>
+
+        <div class="item" id="v1">
+            <img id="img20" src="F:\DESKTOP FILES\34.png ">
+
+            <span style="font-size: 30px;color:lightsalmon;">D</span><b>ata Structre Code <a href="#"
+                    style="  text-decoration: none; color:Black;margin-left:50px;font-size: 30px;">Website</a></b>
+
+        </div>
+        <div class="item" id="v2">
+
+            <img src="project1.png">
+            <P>
+                <a href="project.html"
+                    style="text-decoration: none;color: black;font-size: 19px;text-shadow: 1px 1px 2px black;"> <span
+                        style="color:blueviolet;font-size: 30px;"> How </span>to make progress bar in <u><b>html and
+                            css.</b></u>
+                </a>
+            </P>
+        </div>
+        <div class="item" id="v3">
+            <img src="Untitled.png">
+            <P>
+                <a href="Untitled.png.html"
+                    style="text-decoration: none;color: black;font-size: 19px;text-shadow: 1px 1px 2px black;"> <span
+                        style="color:blueviolet;font-size: 30px;"> How </span>to make Social icon in <u><b>html and
+                            css.</b></u>
+                </a>
+            </P>
+
+        </div>
+
+    </div>
+
+    <div id="div50">
+        <h1 id="h10">
+            SKILLS
+        </h1>
+
+        <button id="btn10">
+            See my HTML Skills
+        </button>
+        <br> <br>
+        <div class="div10" id="div10">
+
+            <div class="progress1" id="item10">
+                <p id="p10"> 10%
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <button id="btn20">
+            See my C++ Skills
+        </button>
+        <br>
+        <br>
+        <div class="div10" id="div20">
+
+            <div class="progress1" id="item20">
+                <P id="p20"> 10%</P>
+            </div>
+        </div>
+        <br>
+        <button id="btn30">
+            See my Jquery Skills
+        </button>
+        <br>
+        <br>
+        <div class="div10" id="div30">
+
+            <div class="progress1" id="item30">
+                <p id="p30">10%</P>
+            </div>
+        </div>
+        <br>
+        <button id="btn40">
+            See my Javascript Skills
+        </button>
+        <br>
+        <br>
+        <div class="div10" id="div40">
+
+            <div class="progress1" id="item40">
+                <p id="p40"> 10%</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="col">
+            <h1>
+                Menus<i class="fa fa-menu" arial-hidden="true" style="color:blue;"></i>
+            </h1>
+            <ul>
+                <li>
+                    <a href="aboutus.html"> About&nbsp;&nbsp; <i class="fa fa-address-card" arial-hidden="true"
+                            style="color:blue;"></i> </a></li>
+
+                <li>
+                    <a href="codeeditor.html"> Code Editor </a><span style="font-size:24px;color:yellow;">&nbsp;&nbsp;
+                        &#9756;</span>
+                </li>
+                <li>
+                    <a href="#">Email</a>&nbsp;&nbsp;<i class="fa fa-envelope" arial-hidden="true"
+                        style="color:brown;"></i>
+                </li>
+                <b style="color:yellow;" class="b">rajeevupadhyay608@gmail.com</b>
+                <li>
+                    <a href="contactus.html">
+                        Contact us &nbsp;<i class="fa fa-phone" arial-hidden="true" style="color:green;"></i>
+                    </a>
+                    <br>
+
+                    <b style="color:green;" class="b">8800382980</b>
+                </li>
+            </ul>
+
+
+        </div>
+
+        <div class="project">
+            <h1  id="prjt">
+                Project IN
+            </h1>
+            <ul>
+                <li>
+                    <a href="#"> HTML&nbsp;&nbsp; <i class="" arial-hidden="true" style="color:blue;"></i></a></li>
+                <li>
+                    <a href="#">Css3</a></li>
+                <li>
+                    <a href="#"> JAVASCRIPT</a>
+                </li>
+                <li>
+                    <a href="#">Java</a>
+                </li>
+                <li>
+                    <a href="#">
+                        C++
+                    </a>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+        <div class="code">
+            <img src="F:\DESKTOP FILES\345.png">
+        </div>
+
+    </div>
+    <div class="social">
+
+        <i class="fa fa-instagram" style="color:rgb(64,93,230);font-size:40px;"></i>
+        <i class="fa fa-facebook" style="color:#3b5998;font-size:40px;"></i>
+        <i class="fa fa-youtube-play" style="  color:red;border:50%;font-size:40px;"></i>
+
+    </div>
+    <div class="developer" style="width:100%;background:brown;height:40px;margin-top: -30px;">
+        <h3 style="text-align: center;">
+            <marquee>2020 &copy; &nbsp;Developed BY RUTECH &#174</marquee>
+        </h3>
+        <script>
+            $(document).ready(function () {
+
+                $("#btn10").click(function () {
+
+                    $("#div10").animate({ "border-radius": "20px" });
+                    $("#p10").html("70%");
+                    $("#p10").animate({ "margin-left": "200px", "margin-top": "5px" }, 2000).css("font-weight", "900").fadeOut(1000).fadeIn("fast");
+                    $("#item10").animate({ "width": "460px" }, 2000).fadeOut(1000).fadeIn();
+
+                    $("#item10").animate({ "font-size": "20px" }, 2000);
+                    $("#item10").css({ "background-color": "Yellow" }, 2000);
+                    $("#item10").css("border-radius", "10px");
+
+
+
+
+
+                });
+                $("#btn20").click(function () {
+
+                    $("#div20").animate({ "border-radius": "20px" });
+                    $("#item20").animate({ "width": "360px" }).fadeOut(1000).fadeIn();
+
+                    $("#p20").text("60%");
+                    $("#p20").animate({ "margin-left": "200px", "margin-top": "5px" }, 2000).css("font-weight", "900").fadeOut(1000).fadeIn();
+                    $("#item20").animate({ "font-size": "20px" }, 2000);
+                    $("#item20").css({ "background-color": "violet" }, 2000);
+                    $("#item20").css("border-radius", "10px");
+
+
+                });
+
+
+
+                $("#btn30").click(function () {
+
+
+                    $("#div30").animate({ "border-radius": "20px" });
+                    $("#item30").animate({ "width": "300px" }).fadeOut(1000).fadeIn();
+                    $("#p30").animate({ "margin-left": "240px", "margin-top": "5px" }, 2000).css("font-weight", "900").fadeOut(1000).fadeIn();
+                    $("#item30").css({ "background-color": "green" }, 1000);
+                    $("#item30").css("border-radius", "10px");
+
+                    $("#p30").text("57%");
+                    $("#item30").animate({ "font-size": "20px" }, 2000);
+                });
+
+                $("#btn40").click(function () {
+
+                    $("#div40").animate({ "border-radius": "20px" });
+
+                    $("#item40").animate({ "width": "220px" }).fadeOut(1000).fadeIn();
+                    $("#p40").animate({ "margin-left": "190px", "margin-top": "5px" }, 2000).text("40%").css("font-weight", "900").fadeOut(1000).fadeIn();
+                    $("#item40").css({ "background-color": "lightblue" }, 1000);
+                    $("#item40").css("border-radius", "10px");
+                });
+                $(".code img").mouseover(function () {
+                    $("img").animate({ "margin-top": "30px" });
+                });
+
+                $(" .code img").mouseout(function () {
+                    $(this).animate({ "margin-top": "0px" });
+                });
+                $(".rightside img").mouseover(function () {
+                    $(this).animate({ "margin-top": "30px" });
+                });
+
+                $(".rightside img").mouseout(function () {
+                    $(this).animate({ "margin-top": "0px" });
+                });
+
+            });
+
+
+        </script>
+
+        <script>
+            var value = 0;
+            function theme() {
+
+                var x = document.getElementById("body");
+
+                if (value == 0) {
+
+                    x.style.background = "black";
+
+                    value = 1;
+
+                }
+                else {
+                    x.style.background = "white";
+
+                    value = 0;
+
+                }
+            }
+
+
+        </script>
+        <script>
+
+
+
+            $(function () {
+                var flag = 0;
+
+                $('.share').click(function () {
+                    if (flag == 0) {
+                        $('.one').css({ "background": "blue", "text-align": "center", }).animate({
+                            top: '1300px',
+                            right: '40px',
+                        }, 200);
+
+                        $('.two').delay(200).css({ "text-align": "center", }).animate({
+                            top: '1340px',
+                            right: '200px'
+                        }, 200);
+
+                        $('.three').css({ "text-align": "center", "background": "violet" }).delay(100).animate({
+                            top: '1320px',
+                            right: '120px'
+                        }, 200);
+
+
+                        flag = 1;
+                    }
+
+
+                    else {
+                        $('.one, .two, .three').animate({
+                            top: '1400px',
+                            right: '60px'
+                        }, 200);
+
+                        flag = 0;
+                    }
+                });
+            });
+        </script>
+
+
+</body>
+
+</html>

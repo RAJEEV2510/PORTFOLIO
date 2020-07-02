@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="jquery.js">
+
+        </script>
+<style>
+    #body1{
+        display: none;
+    }
+#loading{
+
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background: #fff
+    url('https://media.giphy.com/media/c8aGETyW640Fi/giphy.gif')  no-repeat center;  
+     overflow: hidden;
+}
+#theme{
+
+    background:transparent;
+    cursor: pointer;
+    color:black;
+    position: absolute;
+    top:80px;
+    font-size: 20px;
+    border:2px solid black;
+    z-index: -1;
+
+}
+#home{
+            text-decoration: none;
+            color: tomato;
+            width:100px;
+            height: 50px;
+            font-size: 20px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            
+
+            text-align: center;
+        }
+         .code img {
+            border-radius: 50%;
+            height: 160px;
+            width: 150px;
+            position: sticky;
+        }
+
+        .social {
+            width: 100%;
+            background:black;
+            height: 50px;
+            display:flex;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .footer {
+            margin-top: 200px;
+            width: 100%;
+            height: 250px;
+            padding-top: 100px;
+
+            display: flex;
+            flex-direction: row;
+            background: #070617;
+
+            justify-content: space-around;
+
+        }
+
+        .col li {
+            list-style-type: none;
+        }
+
+        .col li a {
+            color: white;
+            list-style: none;
+            text-decoration: none;
+
+        }
+
+        .project li a {
+            color: white;
+
+            text-decoration: none;
+
+        }
+
+        .project li {
+            list-style: none;
+            ;
+        }
+
+        .project h1,
+        .col h1 {
+            color: white;
+            font-weight: 900;
+            
+        }
+   
+ 
+.nav-bgd{
+    background: #26de81;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}    
+.nav-bgd h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.main{
+    
+    width:100%;
+    height: 95%;
+    display: inline-flex;
+
+}
+#editor-textarea{
+
+    width:50%;
+    height:200px;
+    margin:10px;
+    background:#070617;
+color:white;
+font-family: cursive;
+border:10px solid dodgerblue;
+border-radius: 10px;
+}
+#viewer{
+    background: white;
+    border: none;
+    width:50%;
+    margin: 10px;
+    border-radius: 10px;
+    border:10px solid dodgerblue;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    justify-content:space-around;
+
+
+}
+.html{
+    background: brown;
+    width:33.5%;
+    text-align: center;
+}
+.css{
+    background:blueviolet;
+    width:33.5%;
+   
+    text-align: center;
+
+}
+.js{
+    background:yellowgreen;
+    width:33.5%;
+    text-align: center;
+
+}
+.header{
+    
+    background:#ff319c;
+    border-radius:10%;
+}
+
+#head{
+
+    position: absolute;;
+    top:630px;
+    right:300px;
+
+}
+@media only screen and (max-width: 700px) {
+
+#head{
+    top:550px;
+    right:100px;
+    font-size:25px;
+
+}
+.col h1{
+
+font-size:20px;
+margin-left: 30px;
+}
+
+.col ul li{
+font-size: 12px;
+
+}
+.project h1{
+
+    font-size:20px;;
+}
+
+.project ul li{
+    font-size: 12px;
+}
+.code img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-left:-70px;
+    margin-top:-140px;
+}
+.code{
+    border-radius: 50%;
+}
+.social{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    height: 70px;
+
+}
+#editor-textarea{
+
+    width:70%;
+    height:200px;
+    margin:10px;
+    background:#070617;
+color:white;
+font-family: cursive;
+border:10px solid dodgerblue;
+border-radius: 10px;
+}
+#viewer{
+    background: white;
+    border: none;
+    width:30%;
+    margin: 10px;
+    border-radius: 10px;
+    border:10px solid dodgerblue;
+}
+
+}
+</style>
+</head>
+
+
+<body id="body" onload="loading()">
+    <div id="loading">
+
+    </div>   
+<div id="body1">
+    <button id="theme" onclick="theme()">
+        Dark Mode
+    </button>
+    <div class="nav">
+           
+        <div class="html">
+            <H3>
+                HTML
+            </H3>
+        </div>
+        <div class="css">
+            <h3>
+                CSS
+            </h3>
+            </div>
+            <div class="js">
+                <h3>
+                    JS
+                </h3>
+                </div>
+            
+    </div>
+        
+    
+    <div class="nav-bgd">
+            
+           
+          <h1>  The Best Online </h1>
+            <br>
+           <b style="font-size:40px;font-weight: 900;">  Code</b> 
+          <b> Editor This is free HTML ,CSS and javascript Editor code online</b>
+           
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,160C384,149,480,139,576,154.7C672,171,768,213,864,208C960,203,1056,149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg> 
+       
+    
+    </div>
+    <div class="header">
+    <button id="btn1"onclick="refresh()" style="background:black;width: 100px;color:yellow;border-radius:10px; height: 40px;font-size: 20px;font-weight: 900;text-align: center; ">
+     <div >   Run </div>
+    </button>
+    <button id="btn2"onclick="text()" id="btn1"style="background:black;width: 100px;color:yellow;border-radius:10px; height: 40px;font-size: 18px;font-weight: 900;text-align: center; text-transform: capitalize;margin-left:40px;margin-right:40px;margin-bottom:20px;">
+            <div id="btn-1">   Write </div>
+        </button>
+    <button id="btn3"onclick="cl()"style="background:black;width: 100px;color:yellow;border-radius:10px; height: 40px;font-size: 20px;font-weight: 900;text-align: center; ">
+            Clear
+        </button>
+        <h1 id="head">
+            OUTPUT
+            <i class="fa fa-hand-o-down"></i>
+        </h1>
+
+    <div class="main">
+        <textarea id="editor-textarea"> 
+            
+        </textarea>
+        <iframe src="" frameborder="0" id="viewer">
+
+        </iframe>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="white" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,160C384,149,480,139,576,154.7C672,171,768,213,864,208C960,203,1056,149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg> 
+</div>
+<div class="footer">
+        <div class="col">
+            <h1>
+                Menus<i class="fa fa-menu" arial-hidden="true"style="color:blue;"></i> 
+            </h1>
+            <ul>
+                <li>
+                    <a href="aboutus.html"> About&nbsp;&nbsp; <i class="fa fa-address-card" arial-hidden="true"style="color:blue;"></i>   </a></li>
+              
+                <li>
+                    <a href="codeeditor.html"> Code Editor </a><span style="font-size:24px;color:yellowgreen;">&nbsp;&nbsp; &#9756;</span>
+                </li>
+                <li>
+                    <a href="#">Email</a>&nbsp;&nbsp;<i class="fa fa-envelope" arial-hidden="true" style="color:brown;"></i>
+                   <br>
+                    <b style="color:yellow;">rajeevupadhyay608@gmail.com</b>
+                </li>
+                
+                <li>
+                    <a href="contactus.html">
+                        Contact us &nbsp;<i class="fa fa-phone" arial-hidden="true" style="color:green;"></i>  
+                    </a>
+                    <br>
+                    <b style="color:green;">8800382980</b>
+                </li>
+            </ul>
+
+
+        </div>
+
+        <div class="project">
+            <h1>
+                Project IN
+            </h1>
+            <ul>
+                <li>
+                    <a href="#"> HTML&nbsp;&nbsp; <i class="" arial-hidden="true"style="color:blue;"></i></a></li>
+                <li>
+                    <a href="#">Css3</a></li>
+                <li>
+                    <a href="#"> JAVASCRIPT</a>
+                </li>
+                <li>
+                    <a href="#">Java</a>
+                </li>
+                <li>
+                    <a href="#">
+                        C++
+                    </a>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+        <div class="code">
+            <img src="345.png">
+        </div>
+
+    </div>
+    <div class="social">
+       <a id="home" href="index.html">
+          go to Home
+       </a>
+            <i class="fa fa-instagram" style="color:rgb(64,93,230);font-size:40px;"></i>
+                    <i class="fa fa-facebook" style="color:#3b5998;font-size:40px;"></i>
+                         <i class="fa fa-youtube-play" style="  color:red;border:50%;font-size:40px;"></i>
+                   
+    </div>
+    <div class="developer" style="width:100%;background:brown;height:40px;margin-top: -30px;">
+        <h3 style="text-align: center;"><marquee>Developed BY RUTECH &#174</marquee></h3>
+    </div>
+<script>
+function text(){
+
+    document.getElementById("editor-textarea").value="<html><head></head><body></body </html>";
+    
+}
+
+function refresh(){
+    var editor=document.getElementById("editor-textarea").value;
+    document.getElementById("viewer").srcdoc=editor;
+
+}
+function cl(){
+    document.getElementById("editor-textarea").value="<html><head></head><body></body </html>";
+}
+</script>    
+
+<script>
+    $(document).ready(function(){
+
+        $("#btn2").click(function(){
+         $(".main").animate({"height":"590px"}).css("background","lightblue");   
+         $("#editor-textarea").animate({"height":"550px"},2000);
+         $(this).css("border","5px double red").fadeOut().fadeIn(2000);   
+        
+         
+        });
+        $("#btn1").click(function(){
+          
+         
+         $(this).css("border","5px double red").fadeOut().fadeIn(2000);   
+        
+         
+        });$("#btn3").click(function(){
+         
+         $(this).css("border","5px double red").fadeOut().fadeIn(2000);   
+        
+         
+        });
+
+    });
+    
+
+</script>
+<script>
+    var value=0;
+    function theme(){
+   
+    var x=document.getElementById("body");
+    if(value==0)
+    {
+        x.style.background="black";
+        value=1;
+    }
+    else
+    {
+        x.style.background="white";
+        value=0;
+    }
+}
+
+
+function loading(){
+
+    var preloader=document.getElementById("loading").style.display="none";
+      document.getElementById("body1").style.display="block";  
+
+
+}
+</script>
+</body>
+</html>
